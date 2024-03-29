@@ -29,14 +29,14 @@ module.exports = {
   devServer: {
     static: {
       directory: path.resolve(__dirname, 'build'),
-      publicpath: '/build',
+      publicPath: '/build',
     },
-    // proxy: [
-    //   {
-    //     context: ['/'],
-    //     target: 'http://localhost:3000'
-    //   }
-    // ]
+    proxy: [
+      {
+        context: ['/'],
+        target: 'http://localhost:3000'
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
