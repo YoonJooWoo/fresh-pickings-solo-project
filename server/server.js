@@ -1,25 +1,43 @@
 const path = require('path');
 const express = require('express');
+const cors = require('cors');
 
 const app = express();
 
 // const apiRouter = require('./routes/api');
+app.use(cors());
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // handle parsing request body
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // handle requests for static files
+app.use(express.static('client'));
 app.use('/build', express.static(path.resolve(__dirname, '../build')));
 
 app.get('/', (req, res) => {
   return res.status(200).sendFile(path.join(__dirname, '../client/index.html'));
 });
 
+app.get('/seasonal',(req, res) => {
+  return res.status(200).sendFile(path.join(__dirname, '../client/seasonal.html'));
+});
 
-
+app.get('/api/fruit/all', async (req, res) => {
+  try {
+    const response = await fetch('https://www.fruityvice.com/api/fruit/all');
+    const data = await response.json();
+    res.json(data);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 
 
 

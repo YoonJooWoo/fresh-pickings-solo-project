@@ -28,8 +28,8 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.resolve(__dirname, 'build'),
-      publicPath: '/build',
+      directory: path.resolve(__dirname, 'client'),
+      publicPath: '/',
     },
     proxy: [
       {
