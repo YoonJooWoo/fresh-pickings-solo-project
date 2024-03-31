@@ -12,7 +12,7 @@ const MainContainer = () => {
       <div className="outerBox">
         <h3 id="header">What is in-season now?</h3>
         {/* <a href="./seasonal.html"> */}
-        <button onClick={handleButtonClick}>Let's Go</button>
+        <button onClick={handleButtonClick}>Let's Find Out!</button>
         {/* </a> */}
       </div>
     </div>
