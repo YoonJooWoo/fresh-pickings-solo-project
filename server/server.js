@@ -25,16 +25,19 @@ app.get('/seasonal',(req, res) => {
   return res.status(200).sendFile(path.join(__dirname, '../client/seasonal.html'));
 });
 
-app.get('/api/fruit/all', async (req, res) => {
-  try {
-    const response = await fetch('https://www.fruityvice.com/api/fruit/all');
-    const data = await response.json();
-    res.json(data);
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
+// app.get('/api/fruit/all', async (req, res) => {
+//   try {
+//     const response = await fetch('https://www.fruityvice.com/api/fruit/all');
+//     const data = await response.json();
+//     res.json(data);
+//   } catch (error) {
+//     console.error('Error fetching data:', error);
+//     res.status(500).json({ error: 'Internal server error' });
+//   }
+// });
+
+// app.get('/api')
+
 // app.get('*', (req, res) => {
 //   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 // });

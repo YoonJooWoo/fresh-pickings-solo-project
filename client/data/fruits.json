@@ -1,0 +1,138 @@
+[
+    {
+        "name": "Apples",
+        "availableMonths": ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC"]
+    },
+    {
+        "name": "Apricots",
+        "availableMonths": ["MAR", "APR", "MAY", "JUN", "JUL", "AUG"]
+    },
+    {
+        "name": "Avocados",
+        "availableMonths": ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "DEC"]
+    },
+    {
+        "name": "Bananas",
+        "availableMonths": ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC"]
+    },
+    {
+        "name": "Berries",
+        "availableMonths": ["JUN", "JUL", "AUG"]
+    },
+    {
+        "name": "Cherries",
+        "availableMonths": ["JUN", "JUL", "AUG"]
+    },
+    {
+        "name": "Coconuts",
+        "availableMonths": ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC"]
+    },
+    {
+        "name": "Cranberries",
+        "availableMonths": ["SEPT", "OCT", "NOV"]
+    },
+    {
+        "name": "Pineapple",
+        "availableMonths": ["JAN", "FEB", "MAR", "APR", "MAY", "SEPT", "OCT", "NOV", "DEC"]
+    },
+    {
+        "name": "Grapefruit",
+        "availableMonths": ["JAN", "FEB", "DEC"]
+    },
+    {
+        "name": "Grapes",
+        "availableMonths": ["SEPT", "OCT", "NOV"]
+    },
+    {
+        "name": "Kiwi",
+        "availableMonths": ["JAN", "FEB", "MAR", "APR", "MAY", "SEPT", "OCT", "NOV", "DEC"]
+    },
+    {
+        "name": "Lemons",
+        "availableMonths": ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC"]
+    },
+    {
+        "name": "Limes",
+        "availableMonths": ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC"]
+    },
+    {
+        "name": "Mandarin Oranges",
+        "availableMonths": ["JAN", "FEB", "DEC"]
+    },
+    {
+        "name": "Mangoes",
+        "availableMonths": ["JUN", "JUL", "AUG", "SEPT", "OCT", "NOV"]
+    },
+    {
+        "name": "Melons",
+        "availableMonths": ["JUN", "JUL", "AUG"]
+    },
+    {
+        "name": "Oranges",
+        "availableMonths": ["JAN", "FEB", "DEC"]
+    },
+    {
+        "name": "Papayas",
+        "availableMonths": ["MAY", "JUN"]
+    },
+    {
+        "name": "Peaches",
+        "availableMonths": ["JUN", "JUL", "AUG"]
+    },
+    {
+        "name": "Pears",
+        "availableMonths": ["JAN", "FEB", "SEPT", "OCT", "NOV", "DEC"]
+    },
+    {
+        "name": "Plums",
+        "availableMonths": ["JUN", "JUL", "AUG"]
+    },
+    {
+        "name": "Strawberries",
+        "availableMonths": ["MAR", "APR", "MAY", "JUN", "JUL", "AUG"]
+    },
+    {
+        "name": "Watermelons",
+        "availableMonths": ["JUN", "JUL", "AUG"]
+    },
+    {
+        "name": "Dates",
+        "availableMonths": ["AUG", "SEPT", "OCT"]
+    },
+    {
+        "name": "Figs",
+        "availableMonths": ["SEPT", "OCT", "NOV"]
+    },
+    {
+        "name": "Kumquats",
+        "availableMonths": ["SEPT", "OCT", "NOV", "DEC"]
+    },
+    {
+        "name": "Persimmons",
+        "availableMonths": ["SEPT", "OCT", "NOV", "DEC"]
+    },
+    {
+        "name": "Pomegranates",
+        "availableMonths": ["SEPT", "OCT", "NOV", "DEC"]
+    },
+    {
+        "name": "Prickly Pears",
+        "availableMonths": ["JAN", "FEB", "NOV", "DEC"]
+    },
+    {
+        "name": "Quince",
+        "availableMonths": ["OCT", "NOV", "DEC"]
+    },
+    {
+        "name": "Rhubarb",
+        "availableMonths": ["APR", "MAY", "JUN"]
+    },
+    {
+        "name": "Starfruit",
+        "availableMonths": ["OCT", "NOV", "DEC"]
+    },
+    {
+        "name": "Ugli Fruit",
+        "availableMonths": ["JAN", "FEB", "MAR"]
+    }
+]

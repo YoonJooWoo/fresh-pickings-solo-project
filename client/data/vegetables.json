@@ -1,0 +1,11 @@
+[ 
+  {
+    "name": "Artichokes",
+    "availableMonths": ["MAR", "APR", "MAY", "JUN", "JUL", "AUG"]
+  },
+  {
+    "name": "Arugula",
+    "availableMonths": ["JUN", "JUL", "AUG", "SEPT"]
+  }
+
+]
