@@ -3,8 +3,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const MainContainer = () => {
+  const navigate = useNavigate();
   const handleButtonClick = () => {
-    window.location.href = './seasonal';
+    // window.location.href = './seasonal';
+    navigate('./seasonal');
   };
 
   return (

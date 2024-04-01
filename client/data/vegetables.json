@@ -48,7 +48,7 @@
     "availableMonths": ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC"]
   },
   {
-    "name": "Chile Peppers",
+    "name": "Chili Peppers",
     "availableMonths": ["MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT"]
   },
   {
@@ -68,7 +68,7 @@
     "availableMonths": ["MAR", "APR", "MAY", "SEPT", "OCT", "NOV"]
   },
   {
-    "name": "Cultivated Mushrooms",
+    "name": "Edible Mushrooms",
     "availableMonths": ["MAR", "APR", "MAY", "SEPT", "OCT", "NOV"]
   },
   {
@@ -212,7 +212,7 @@
     "availableMonths": ["JAN", "FEB", "NOV", "DEC"]
   },
   {
-    "name": "Wild Mushrooms",
+    "name": "Mushrooms",
     "availableMonths": ["JAN", "SEPT", "OCT", "NOV", "DEC"]
   }
 ]

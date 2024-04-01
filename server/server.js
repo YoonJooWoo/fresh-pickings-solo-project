@@ -22,10 +22,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/seasonal',(req, res) => {
-  return res.status(200).sendFile(path.join(__dirname, '../client/seasonal.html'));
+  return res.status(200).sendFile(path.join(__dirname, '../client/components/SeasonalPage.jsx'));
 });
 
-// app.get('/api/fruit/all', async (req, res) => {
+// app.get('/seasonal/details/', async (req, res) => {
 //   try {
 //     const response = await fetch('https://www.fruityvice.com/api/fruit/all');
 //     const data = await response.json();
