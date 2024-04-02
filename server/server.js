@@ -14,15 +14,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // handle requests for static files
-app.use(express.static('client'));
+app.use(express.static(path.join('client')));
 app.use('/build', express.static(path.resolve(__dirname, '../build')));
 
 app.get('/', (req, res) => {
-  return res.status(200).sendFile(path.join(__dirname, '../client/index.html'));
+  return res.status(200).sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.get('/seasonal',(req, res) => {
-  return res.status(200).sendFile(path.join(__dirname, '../client/components/SeasonalPage.jsx'));
+app.get('*',(req, res) => {
+  return res.sendFile(path.resolve(__dirname, '../build', 'index.html'));
 });
 
 // app.get('/seasonal/details/', async (req, res) => {
@@ -38,7 +38,7 @@ app.get('/seasonal',(req, res) => {
 
 // app.get('/api')
 
-// app.get('*', (req, res) => {
+// app.get('/*', (req, res) => {
 //   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 // });
 

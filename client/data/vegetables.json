@@ -16,7 +16,7 @@
   "availableMonths": ["JUN", "JUL", "AUG", "SEPT", "OCT", "NOV"]
   },
   {
-    "name": "Beans(Green)",
+    "name": "Green Beans",
     "availableMonths": ["JUN", "JUL", "AUG", "SEPT", "OCT", "NOV"]
   },
   {
@@ -68,7 +68,7 @@
     "availableMonths": ["MAR", "APR", "MAY", "SEPT", "OCT", "NOV"]
   },
   {
-    "name": "Edible Mushrooms",
+    "name": "Mushrooms",
     "availableMonths": ["MAR", "APR", "MAY", "SEPT", "OCT", "NOV"]
   },
   {
@@ -88,7 +88,7 @@
     "availableMonths": ["SEPT", "OCT", "NOV"]
   },
   {
-    "name": "Green Onions",
+    "name": "Scallion",
     "availableMonths": ["JAN", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "DEC"]
   },
   {
@@ -210,9 +210,5 @@
   {
     "name": "Truffles",
     "availableMonths": ["JAN", "FEB", "NOV", "DEC"]
-  },
-  {
-    "name": "Mushrooms",
-    "availableMonths": ["JAN", "SEPT", "OCT", "NOV", "DEC"]
   }
 ]

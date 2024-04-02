@@ -46,8 +46,8 @@ const Details = () => {
       <div>
         <h2>Recipes</h2>
         <ul>
-          {recipes.map(recipe => (
-            <li key={recipe.label}>
+          {recipes.slice(0, 6).map((recipe, index) => (
+            <li key={index}>
               <img src={recipe.image} alt={recipe.label} />
               <a href={recipe.url} target='_blank' rel='noopener noreferrer'>{recipe.label}</a>
             </li>
