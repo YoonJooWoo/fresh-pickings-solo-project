@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-        
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body {
@@ -11,7 +11,6 @@ header {
     border-bottom: solid rgb(227, 227, 227) 2px;
     background-color: lightyellow;
     padding-top: 2px;
-    font-family: 'Courier New', Courier, monospace;
     color: lightcoral;
 }
 
@@ -23,11 +22,35 @@ header {
 .vegetable_container,
 .fruit_container {
     margin: 0 50px;
+
 }
 
 ul {
     list-style-type: none;
     text-align: left;
+}
+
+.seasonal_container li a {
+    list-style-type: none;
+    text-decoration: none;
+    color: lightcoral;
+}
+
+.seasonal_container li a:visited {
+    color: darkgrey;
+}
+
+.vegetable_container h2 {
+    color: lightslategray;
+}
+
+.fruit_container h2 {
+    color: lightslategrey
+}
+
+#seasonal-vegetables,
+#seasonal-fruits {
+    background-color: lightyellow;
 }
 
 #month-buttons button {
@@ -37,7 +60,6 @@ ul {
     padding: 8px, 16px;
     margin: 5px;
     font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
 }
 
