@@ -17,9 +17,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join('client')));
 app.use('/build', express.static(path.resolve(__dirname, '../build')));
 
+// app.get('/seasonal/:itemName', (req, res) => {
+//   return res.sendFile(path.resolve(__dirname, '../build', 'index.html'));
+// });
+
 app.get('/', (req, res) => {
-  return res.status(200).sendFile(path.join(__dirname, 'build', 'index.html'));
+  return res.status(200).sendFile(path.resolve(__dirname, '../build', 'index.html'));
 });
+
+
 
 app.get('*',(req, res) => {
   return res.sendFile(path.resolve(__dirname, '../build', 'index.html'));

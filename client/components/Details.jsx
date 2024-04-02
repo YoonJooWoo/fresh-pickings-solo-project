@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 const Details = () => {
   const { itemName } = useParams();
   const [itemDetails, setItemDetails] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
@@ -27,32 +28,44 @@ const Details = () => {
 
         setItemDetails({ imageUrl, description });
         setRecipes(fetchedRecipes);
+        setIsLoading(false);
 
       } catch (error) {
         console.error('Error fetching data ', error);
+        setIsLoading(false);
       }
     };
 
     fetchItemDetails();
   }, [itemName]);
 
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  
+
   return (
     <div>
-      <div>
+      <div className='details-outerbox'>
         <h2>{itemName}</h2>
-        {itemDetails.imageUrl && <img src={itemDetails.imageUrl} alt={itemName} />}
-        <p>Description: {itemDetails.description}</p>
+        <div className='details-container'>
+          {itemDetails.imageUrl && <img className='details_image' src={itemDetails.imageUrl} alt={itemName} />}
+          <div className='description'>{itemDetails.description}</div>
+        </div>
       </div>
-      <div>
+      <div className='recipe-outerbox'>
         <h2>Recipes</h2>
-        <ul>
+        <div className='recipe-container'>
+          
           {recipes.slice(0, 6).map((recipe, index) => (
-            <li key={index}>
+            <div key={index} className='recipe-card'>
               <img src={recipe.image} alt={recipe.label} />
               <a href={recipe.url} target='_blank' rel='noopener noreferrer'>{recipe.label}</a>
-            </li>
+            </div>
           ))}
-        </ul>
+          
+        </div>
       </div>
     </div>
          

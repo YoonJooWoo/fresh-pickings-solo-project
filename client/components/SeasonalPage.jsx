@@ -68,7 +68,7 @@ const SeasonalPage = () => {
           <ul id='seasonal-vegetables'>
             {filteredVegetables.map(vegetable => (
               <li key={vegetable.name}>
-                <Link to={`./details/${vegetable.name}`}>{vegetable.name}</Link>
+                <Link to={`./${vegetable.name}`}>{vegetable.name}</Link>
               </li>
             ))}
           </ul>
@@ -78,7 +78,7 @@ const SeasonalPage = () => {
           <ul id='seasonal-fruits'>
             {filteredFruits.map(fruit => (
               <li key={fruit.name}>
-                <Link to={`./details/${fruit.name}`}>{fruit.name}</Link>
+                <Link to={`./${fruit.name}`}>{fruit.name}</Link>
               </li>
             ))}
           </ul>
