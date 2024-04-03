@@ -11,11 +11,16 @@ const Details = () => {
     const fetchItemDetails = async () => {
       try {
         //fetch data from Wikipedia API
-        const wikiResponse = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${itemName}`);
-        const wikiData = await wikiResponse.json();
+        const foodDescription = await fetch(`http://en.wikipedia.org/api/rest_v1/page/summary/${itemName}`);
+        const descriptionData = await foodDescription.json();
+        const description = descriptionData?.extract;
 
-        const imageUrl = wikiData?.thumbnail?.source;
-        const description = wikiData?.extract;
+        const foodResponse = await fetch(`https://api.edamam.com/api/food-database/v2/parser?ingr=${itemName}&app_id=26de60ee&app_key=b1c06f525ed260d85d343e5dbbef36ba`);
+        const foodData = await foodResponse.json();
+
+        const imageUrl = foodData?.hints[0]?.food?.image;
+        const nutrients = foodData?.hints[0]?.food?.nutrients;
+        
 
         //fetch recipes from Edamam API
         const edamamResponse = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${itemName}&app_id=26820645&app_key=3c1afea0e1c66b9bb7177807d60193c6`);
@@ -26,7 +31,8 @@ const Details = () => {
           url: hit.recipe.url
         }));
 
-        setItemDetails({ imageUrl, description });
+        // console.log(nutrients);
+        setItemDetails({ imageUrl, description, nutrients });
         setRecipes(fetchedRecipes);
         setIsLoading(false);
 
@@ -39,6 +45,16 @@ const Details = () => {
     fetchItemDetails();
   }, [itemName]);
 
+  // translating keys to labels
+  const nutrientLabels = {
+    ENERC_KCAL: 'Energy (Kcal)',
+    PROCNT: 'Protein (g)',
+    FAT: 'Fat (g)',
+    CHOCDF: 'Carbohydrates (g)',
+    FIBTG: 'Fiber (g)'
+  };
+
+  // loading message to show mounting
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -51,7 +67,19 @@ const Details = () => {
         <h2>{itemName}</h2>
         <div className='details-container'>
           {itemDetails.imageUrl && <img className='details_image' src={itemDetails.imageUrl} alt={itemName} />}
-          <div className='description'>{itemDetails.description}</div>
+          <div>
+            <div className='description'>{itemDetails.description}</div>
+            <div className='nutrients'>
+              <h4>Nutritional Information</h4>
+              <ul>
+                {Object.keys(itemDetails.nutrients).map((key, index) => (
+                  <li key={index}>
+                    <strong>{nutrientLabels[key]}</strong>: {itemDetails.nutrients[key]}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <div className='recipe-outerbox'>

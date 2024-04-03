@@ -14,6 +14,50 @@ header {
     color: lightcoral;
 }
 
+nav {
+    text-align: right;
+    /* background-color: lightcoral; */
+}
+
+#login_button {
+    font-size: 13px;
+    background-color: lightcoral;
+    color: white;
+    border-color: lightcoral;
+    border: solid 1px lightcoral;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+.login_outerbox {
+    border: solid lightgrey 1px;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#login_box {
+    margin-top: 20px;
+    button {
+        margin-top: 30px;
+    }
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+}
+
+
 .seasonal_container {
     display: flex;
     justify-content: center
@@ -75,8 +119,8 @@ ul {
 
 .details-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    /* justify-content: center; */
     width: 100%;
 }
 
@@ -89,6 +133,15 @@ ul {
 .description {
     margin-left: 20px;
     text-align: left;
+    font-size: 13px;
+    margin-right: 20px;
+}
+
+.nutrients {
+    text-align: left;
+    font-size: 13px;
+    margin-left: 20px;
+    margin-top: 30px;
 }
 
 .recipe-outerbox {

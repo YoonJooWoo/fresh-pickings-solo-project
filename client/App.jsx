@@ -4,6 +4,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import MainContainer from './components/MainContainer.jsx';
 import SeasonalPage from './components/SeasonalPage.jsx';
 import Details from './components/Details.jsx';
+import Signin from './components/Signin.jsx';
 // import './stylesheets/styles.css';
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
         <Route exact path='/' element={<MainContainer />} />
         <Route path='/seasonal' element={<SeasonalPage />} />
         <Route path='/seasonal/:itemName' element={<Details />} />  
+        <Route path='/signin' element={<Signin />} />
       </Routes>
     </div>    
   );
