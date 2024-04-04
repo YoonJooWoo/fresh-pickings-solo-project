@@ -5,6 +5,7 @@ const Signin = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   // const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleCreateAccount = async (e) => {
     e.preventDefault();
@@ -17,11 +18,15 @@ const Signin = () => {
         },
         body: JSON.stringify({ username, password })
       });
+      console.log('Response status:', response.status);
+      console.log('Response body:', await response.json());
+
       if (response.ok) {
         console.log('Account created successfully');
-        useNavigate('./seasonal');
+        navigate('/seasonal');
       } else {
         console.log('Failed to create account');
+        // useNavigate('./signin');
       }
     } catch (error) {
       console.error('Error creating account: ', error);
@@ -44,6 +49,7 @@ const Signin = () => {
         useNavigate('./seasonal');
       } else {
         console.error('Invalid username or password');
+        
       }
     } catch (error) {
       console.error('Error logging in: ', error);
