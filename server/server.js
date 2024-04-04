@@ -4,7 +4,7 @@ const cors = require('cors');
 
 const app = express();
 
-// const apiRouter = require('./routes/api');
+const apiRouter = require('./routes/api');
 app.use(cors());
 
 const PORT = process.env.PORT || 3000;
@@ -25,6 +25,8 @@ app.get('/', (req, res) => {
   return res.status(200).sendFile(path.resolve(__dirname, '../build', 'index.html'));
 });
 
+//define route handlers
+app.use('/api', apiRouter);
 
 
 app.get('*',(req, res) => {
