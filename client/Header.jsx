@@ -3,9 +3,14 @@ import { useNavigate } from 'react-router-dom';
 
 import LoginButton from './components/LoginButton.jsx';
 import SignupButton from './components/SignupButton.jsx';
+import favicon from './favicon.png';
 
 const Header = ({ isAuthenticated, setIsAuthenticated }) => {
   const navigate = useNavigate();
+
+  const redirectToSeasonal = async () => {
+    navigate('/seasonal');
+  };
 
   const handleLogout = async () => {
     try {
@@ -26,7 +31,10 @@ const Header = ({ isAuthenticated, setIsAuthenticated }) => {
 
   return (
     <header>
-      <h1>Fresh Pickings</h1>
+      <div onClick={redirectToSeasonal} style={{ cursor: 'pointer' }}>
+        <img src={favicon} alt='Favicon' />
+        <h1>Fresh Pickings</h1>
+      </div>
       <nav>
         {isAuthenticated ? (
           <>
