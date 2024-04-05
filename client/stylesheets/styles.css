@@ -21,7 +21,7 @@ nav {
 
 .container {
     background-image: url('../assets/vegetables.jpg');
-    
+    /* position: relative; */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,6 +31,7 @@ nav {
 }
 
 .outerBox {
+    position: relative;
     padding-top: 240px;
     padding-left: 350px;
     h3 {
@@ -152,6 +153,8 @@ ul {
 .details-outerbox h2 {
     text-align: left;
     margin-left: 40px;
+    font-style: italic;
+    text-decoration: underline;
 }
 
 .details-container {
@@ -172,6 +175,8 @@ ul {
     text-align: left;
     font-size: 13px;
     margin-right: 20px;
+    background-color:rgb(251, 224, 183, 0.7);
+    padding: 5px;
 }
 
 .nutrients {
@@ -182,10 +187,12 @@ ul {
 }
 
 .recipe-outerbox {
-    margin-top: 20px;
+    margin-top: 50px;
     h2 {
         text-align: left;
         margin-left: 40px;
+        font-style: italic;
+        text-decoration: underline;
     }
 }
 
@@ -201,6 +208,9 @@ ul {
     width: calc(33.33% - 20px);
     margin: 10px;
     text-align: center;
+    background-color:rgb(251, 224, 183, 0.7);
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .recipe-card img {

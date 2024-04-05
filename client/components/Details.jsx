@@ -31,9 +31,13 @@ const Details = () => {
           url: hit.recipe.url
         }));
 
+        // shuffle the recipes array to randomize the recipes
+        const shuffledRecipes = fetchedRecipes.sort(() => Math.random() - 0.5);
+        const selectedRecipes = shuffledRecipes.slice(0, 6);
+
         // console.log(nutrients);
         setItemDetails({ imageUrl, description, nutrients });
-        setRecipes(fetchedRecipes);
+        setRecipes(selectedRecipes);
         setIsLoading(false);
 
       } catch (error) {
@@ -86,7 +90,7 @@ const Details = () => {
         <h2>Recipes</h2>
         <div className='recipe-container'>
           
-          {recipes.slice(0, 6).map((recipe, index) => (
+          {recipes.map((recipe, index) => (
             <div key={index} className='recipe-card'>
               <img src={recipe.image} alt={recipe.label} />
               <a href={recipe.url} target='_blank' rel='noopener noreferrer'>{recipe.label}</a>
