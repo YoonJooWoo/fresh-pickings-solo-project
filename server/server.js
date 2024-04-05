@@ -48,7 +48,7 @@ app.get('/', (req, res) => {
 app.post('/signup', 
   userController.createUser, 
   cookieController.setSSIDCookie,
-  sessionController.startSession, 
+  // sessionController.startSession, 
   (req, res) => {
     return res.status(200).redirect('/seasonal');
   });
@@ -56,7 +56,7 @@ app.post('/signup',
 app.post('/login', 
   userController.verifyUser, 
   cookieController.setSSIDCookie,
-  sessionController.startSession,
+  // sessionController.startSession,
   (req, res) => {
     return res.status(200).redirect('/seasonal');
   });

@@ -7,7 +7,7 @@ sessionController.startSession = async (req, res, next) => {
     const { ssid } = req.cookies;
     
     // If ssid cookie is not present, 
-    const sessionId = ssid || res.locals.users._id;
+    const sessionId = ssid || res.locals.users._id.toString();
     console.log('req.cookies: ', req.cookies);
     console.log('ssid: ', ssid);
     console.log('sessionId: ', sessionId);
