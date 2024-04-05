@@ -21,7 +21,7 @@ nav {
 
 .container {
     background-image: url('../assets/vegetables.jpg');
-    /* position: relative; */
+    /* position: absolute; */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -63,6 +63,15 @@ nav {
     color: lightcoral;
 }
 
+#logout_button:hover {
+    background-color: white;
+    color: lightcoral;
+}
+
+#go_button:hover {
+    background-color: white;
+    color: lightcoral;
+}
 
 
 .login_outerbox {
