@@ -9,7 +9,7 @@ body {
 
 header {
     border-bottom: solid rgb(227, 227, 227) 2px;
-    background-color: lightyellow;
+    background-color: rgb(251, 224, 183);
     padding-top: 20px;
     color: lightcoral;
 }
@@ -19,7 +19,26 @@ nav {
     /* background-color: lightcoral; */
 }
 
-#login_button, #signup_button, #logout_button {
+.container {
+    background-image: url('../assets/vegetables.jpg');
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0 auto;
+
+}
+
+.outerBox {
+    padding-top: 240px;
+    padding-left: 350px;
+    h3 {
+        font-style: italic;
+    }
+}
+
+#login_button, #signup_button, #logout_button, #go_button {
     font-size: 13px;
     background-color: lightcoral;
     color: white;
@@ -81,7 +100,7 @@ nav {
 .vegetable_container,
 .fruit_container {
     margin: 0 50px;
-
+    
 }
 
 ul {
@@ -109,7 +128,10 @@ ul {
 
 #seasonal-vegetables,
 #seasonal-fruits {
-    background-color: lightyellow;
+    background-color: rgb(251, 224, 183);
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #month-buttons button {

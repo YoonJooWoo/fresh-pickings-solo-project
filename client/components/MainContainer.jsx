@@ -2,6 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 const MainContainer = () => {
   const navigate = useNavigate();
   
@@ -15,7 +16,7 @@ const MainContainer = () => {
       <div className="outerBox">
         <h3 id="header">What is in-season now?</h3>
         {/* <a href="./seasonal.html"> */}
-        <button onClick={handleButtonClick}>Let's Find Out!</button>
+        <button id='go_button' onClick={handleButtonClick}>Let's Find Out!</button>
         {/* </a> */}
       </div>
     </div>

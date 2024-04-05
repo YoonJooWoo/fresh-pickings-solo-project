@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import LoginButton from './components/LoginButton.jsx';
 import SignupButton from './components/SignupButton.jsx';
-import favicon from './favicon.png';
+import favicon from './assets/favicon.png';
 
 const Header = ({ isAuthenticated, setIsAuthenticated }) => {
   const navigate = useNavigate();
