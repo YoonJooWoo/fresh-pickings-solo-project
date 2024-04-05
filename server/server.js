@@ -1,14 +1,31 @@
 const path = require('path');
 const express = require('express');
 const cors = require('cors');
-
+const mongoose = require('mongoose');
+const cookieParser = require('cookie-parser');
 const app = express();
 
 const apiRouter = require('../routes/api.js');
 const userController = require('../controllers/userController.js');
+const cookieController = require('../controllers/cookieController.js');
+const sessionController = require('../controllers/sessionController.js');
+
 app.use(cors());
+app.use(cookieParser());
 
 const PORT = process.env.PORT || 3000;
+
+
+const mongoURI = 'mongodb+srv://yjdream:..iZ_fd2atWXE2c@cluster1.4d1skgm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1';
+// mongodb+srv://yjdream:<password>@cluster1.4d1skgm.mongodb.net/
+
+mongoose.connect(mongoURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  dbName: 'freshpickings'
+});
+
+
 
 // handle parsing request body
 app.use(express.json());
@@ -27,30 +44,30 @@ app.get('/', (req, res) => {
 });
 
 //define route handlers
-app.use('/api', apiRouter);
+// app.use('/api', apiRouter);
+app.post('/signup', 
+  userController.createUser, 
+  cookieController.setSSIDCookie,
+  sessionController.startSession, 
+  (req, res) => {
+    return res.status(200).redirect('/seasonal');
+  });
 
+app.post('/login', 
+  userController.verifyUser, 
+  cookieController.setSSIDCookie,
+  sessionController.startSession,
+  (req, res) => {
+    return res.status(200).redirect('/seasonal');
+  });
+
+app.post('/logout', sessionController.clearSession, (req, res) => {
+  return res.status(200).redirect('/login');
+});
 
 app.get('*',(req, res) => {
   return res.sendFile(path.resolve(__dirname, '../build', 'index.html'));
 });
-
-// app.get('/seasonal/details/', async (req, res) => {
-//   try {
-//     const response = await fetch('https://www.fruityvice.com/api/fruit/all');
-//     const data = await response.json();
-//     res.json(data);
-//   } catch (error) {
-//     console.error('Error fetching data:', error);
-//     res.status(500).json({ error: 'Internal server error' });
-//   }
-// });
-
-// app.get('/api')
-
-// app.get('/*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// });
-
 
 
 app.use((err, req, res, next) => {

@@ -1,52 +1,30 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
-const Signin = () => {
+const Login = ({ setIsAuthenticated }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   // const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  // const apiSignup = 'http://localhost:8080/signup';
 
-  const handleCreateAccount = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch('/api/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ username, password })
-      });
-      console.log('Response status:', response.status);
-      console.log('Response body:', await response.json());
-
-      if (response.ok) {
-        console.log('Account created successfully');
-        navigate('/seasonal');
-      } else {
-        console.log('Failed to create account');
-        // useNavigate('./signin');
-      }
-    } catch (error) {
-      console.error('Error creating account: ', error);
-    }
-  };
   
   const handleLogin = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch('/api/login', {
+      const response = await fetch('/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({ username, password })
       });
+
       if (response.ok) {
         console.log('Login successful');
-        useNavigate('./seasonal');
+        setIsAuthenticated(true);
+        navigate('/seasonal');
       } else {
         console.error('Invalid username or password');
         
@@ -72,12 +50,12 @@ const Signin = () => {
               <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
             </label>
           </div>
-          <button type='submit' onClick={handleCreateAccount}>Create Account</button>
-          <button type='submit' onClick={handleLogin}>Log In</button>
+          <button type='submit' onClick={handleLogin}>LogIn</button>
+          
         </form>
       </div>
     </div>
   );
 };
 
-export default Signin;
+export default Login;

@@ -1,11 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const LoginButton = ({ isAuthenticated }) => {
+const signupButton = ({ isAuthenticated }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/login');
+    navigate('./signup');
   };
 
   if (isAuthenticated) {
@@ -13,9 +13,9 @@ const LoginButton = ({ isAuthenticated }) => {
   }
 
   return (
-    <button id='login_button' onClick={handleClick}>Log In</button>
+    <button id='signup_button' onClick={handleClick}>Signup</button>
   );
 };
 
 
-export default LoginButton;
+export default signupButton;

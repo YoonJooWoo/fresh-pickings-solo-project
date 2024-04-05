@@ -19,7 +19,7 @@ nav {
     /* background-color: lightcoral; */
 }
 
-#login_button {
+#login_button, #signup_button, #logout_button {
     font-size: 13px;
     background-color: lightcoral;
     color: white;
@@ -28,7 +28,22 @@ nav {
     border-radius: 5px;
     font-weight: bold;
     box-shadow: none;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
 }
+
+#login_button:hover {
+    background-color: white;
+    color: lightcoral;
+}
+
+#signup_button:hover {
+    background-color: white;
+    color: lightcoral;
+}
+
+
 
 .login_outerbox {
     border: solid lightgrey 1px;
@@ -41,7 +56,7 @@ nav {
     margin-top: 100px;
 }
 
-#login_box {
+#login_box, #signup_box {
     margin-top: 20px;
     button {
         margin-top: 30px;
