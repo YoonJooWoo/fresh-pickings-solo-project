@@ -24,6 +24,7 @@ const Signup = ({ setIsAuthenticated }) => {
       if (response.ok) {
         console.log('Account created successfully');
         setIsAuthenticated(true);
+        // alert('Account created successfully!');
         navigate('/seasonal');
       } else {
         console.log('Failed to create account');
