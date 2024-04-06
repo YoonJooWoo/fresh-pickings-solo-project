@@ -23,7 +23,7 @@ nav {
     background-image: url('../assets/vegetables.jpg');
     /* position: absolute; */
     background-position: center;
-    background-size: cover;
+    background-size: fill;
     background-repeat: no-repeat;
     height: 100vh;
     margin: 0 auto;
@@ -39,7 +39,7 @@ nav {
     }
 }
 
-#login_button, #signup_button, #logout_button, #go_button {
+#login_button, #signup_button, #logout_button {
     font-size: 13px;
     background-color: lightcoral;
     color: white;
@@ -53,28 +53,24 @@ nav {
     cursor: pointer;
 }
 
-#login_button:hover {
+#go_button, #createAccount, #loginAccount {
+    background-color: lightcoral;
+    color: white;
+    border-color: lightcoral;
+    border: solid 1px lightcoral;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+#login_button:hover, #signup_button:hover, #logout_button:hover, #go_button:hover, #createAccount:hover, #loginAccount:hover {
     background-color: white;
     color: lightcoral;
 }
-
-#signup_button:hover {
-    background-color: white;
-    color: lightcoral;
-}
-
-#logout_button:hover {
-    background-color: white;
-    color: lightcoral;
-}
-
-#go_button:hover {
-    background-color: white;
-    color: lightcoral;
-}
-
 
 .login_outerbox {
+    background-color:rgb(251, 224, 183, 0.7);
     border: solid lightgrey 1px;
     border-radius: 10px;
     padding-bottom: 30px;
@@ -86,6 +82,7 @@ nav {
 }
 
 #login_box, #signup_box {
+    
     margin-top: 20px;
     button {
         margin-top: 30px;
@@ -125,7 +122,7 @@ ul {
 }
 
 .seasonal_container li a:visited {
-    color: darkgrey;
+    color: lightcoral;
 }
 
 .vegetable_container h2 {

@@ -52,7 +52,7 @@ const Signup = ({ setIsAuthenticated }) => {
               <input type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
             </label>
           </div>
-          <button type='submit' onClick={handleCreateAccount}>Create Account</button>
+          <button id='createAccount' type='submit' onClick={handleCreateAccount}>Create Account</button>
           
         </form>
       </div>

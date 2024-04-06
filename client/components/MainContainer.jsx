@@ -14,7 +14,7 @@ const MainContainer = () => {
   return (
     <div className="container">
       <div className="outerBox">
-        <h3 id="header">What is in-season now?</h3>
+        <h3 id="header">What fruits and vegetables are <br/>in-season now?</h3>
         {/* <a href="./seasonal.html"> */}
         <button id='go_button' onClick={handleButtonClick}>Let's Find Out!</button>
         {/* </a> */}
