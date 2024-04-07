@@ -20,11 +20,11 @@ nav {
 }
 
 .container {
-    background-image: url('../assets/vegetables.jpg');
+    /* background-image: url('../assets/vegetables.jpg'); */
     /* position: absolute; */
-    background-position: center;
-    background-size: fill;
-    background-repeat: no-repeat;
+    /* background-position: center; */
+    /* background-size: fill; */
+    /* background-repeat: no-repeat; */
     height: 100vh;
     margin: 0 auto;
 
