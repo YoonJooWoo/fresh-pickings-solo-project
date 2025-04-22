@@ -47,6 +47,3 @@ Fresh Pickings is a web application that helps users discover seasonal produce a
     ```bash
     nodemon servre/server.js
 
-## 🧩 Project Structure
-
-    ``` fresh-pickings/ ├── client/ # React frontend (.jsx) │ ├── assets/ │ ├── components/ │ ├── data/ │ ├── stylesheets/ │ ├── App.jsx │ ├── Header.jsx │ ├── index.html │ └── index.js ├── controllers/ # Backend controllers │ ├── cookieController.js │ ├── sessionController.js │ └── userController.js ├── models/ # Database models │ ├── seasonalModel.js │ ├── sessionModel.js │ └── userModel.js ├── routes/ # API routes │ └── api.js ├── server/ # Express server │ └── server.js ├── .babelrc ├── package-lock.json ├── package.json └── webpack.config.js ```
